@@ -1,3 +1,11 @@
+# This project is done as a part of the LTH course: EDAF90, Web programming.
+
+The authours are:
+Lars Breum Hansen, la8177br-2
+Linnéa Gädda,
+Elham Tayebi
+Ella Hammer
+
 # PhisingProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
