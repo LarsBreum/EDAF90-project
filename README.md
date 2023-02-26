@@ -8,6 +8,10 @@ Ella Hammer
 
 # PhisingProject
 
+## Information of the project
+
+This is supposed to be a fake phishing website. We are copying the design of the bookshop as a joke. This is not a real site and should not be treated as such.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
 ## Development server
