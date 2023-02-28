@@ -2,15 +2,15 @@
 
 The authours are:
 Lars Breum Hansen, la8177br-2
-Linnéa Gädda,
-Elham Tayebi
-Ella Hammer
+Linnéa Gädda, li4747ga-s
+Elham Tayebi, el1461ta-s
+Ella Hammer, el5416ha-s
 
 # PhisingProject
 
 ## Information of the project
 
-This is supposed to be a fake phishing website. We are copying the design of the bookshop as a joke. This is not a real site and should not be treated as such.
+This is supposed to be a fake phishing website. We are copying the design of the bookshop (https://campusbokhandeln.se/?msclkid=ca1eacb8bb821e277628cf4bcb4aca05) as a joke. This is not a real site and should not be treated as such. We will only save user input in localstorage on the user's own machine.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
