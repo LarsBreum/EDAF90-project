@@ -1,18 +1,19 @@
-<html>
-<div>
-  <img src="../assets/campus-header.PNG" width="1200">
+<header>
+  <div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+        <img src="../assets/campus-header.PNG" width="1200" alt="header">
+      </a>
+    </nav>
 
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="/cart">
-      <img src="../assets/cart.PNG" width="50" height="50" alt="cart">
-    </a>
-  </nav>
-  
-  <img src="../assets/campus-body.PNG" width="1200">
-</div>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="/cart">
+        <img src="../assets/cart.PNG" width="50" height="50" alt="cart">
+      </a>
+    </nav>
+  </div>
+</header>
 
-<div>
-  Populär kurslitteratur:
-</div>
-
-</html>
+<!-- Den här behövs för att routingen ska funka men jag fattar inte till vad... -->
+<router-outlet></router-outlet>
+<!-- Routed components go here -->
