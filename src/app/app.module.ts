@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { ViewBookComponent } from './view-book/view-book.component';
@@ -8,10 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatBadgeModule} from '@angular/material/badge';
 //import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,16 +21,19 @@ import {MatBadgeModule} from '@angular/material/badge';
     CartComponent,
     OrderConfirmationComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCardModule,
+    MatIconModule,
     //NoopAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
