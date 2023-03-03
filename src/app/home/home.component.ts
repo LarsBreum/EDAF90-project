@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input } from '@angular/core';
 import { BookService } from '../book.service';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ export class HomeComponent {
   books: any[];
   constructor(
     private bookService: BookService,
-    private activatedroute: ActivatedRoute
+    private activatedroute: ActivatedRoute,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -33,5 +35,11 @@ export class HomeComponent {
     console.log(this.books);
 
     //use the bookService to load in books
+  }
+
+  addToCart(isbn: any): void {
+    this.cartService.addToCart(isbn);
+    const items: any = this.cartService.getItems();
+    console.log(items);
   }
 }

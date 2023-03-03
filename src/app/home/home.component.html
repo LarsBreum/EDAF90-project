@@ -21,6 +21,11 @@
       <p>{{ book.authors[0].name }}</p>
       <p>Price: {{ book.number_of_pages }} kr</p>
     </a>
-    <button class="btn btn-primary">Køb</button>
+    <button
+      class="btn btn-primary"
+      (click)="addToCart(book.identifiers.isbn_10[0])"
+    >
+      Køb
+    </button>
   </div>
 </div>

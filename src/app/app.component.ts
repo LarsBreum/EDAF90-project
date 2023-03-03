@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from './book.service';
 import { HomeComponent } from './home/home.component';
+import { CartService } from './cart.service';
 
 declare var window: any;
 
