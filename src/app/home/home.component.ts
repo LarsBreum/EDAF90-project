@@ -26,10 +26,11 @@ export class HomeComponent {
 
     this.ids.forEach((id) => {
       this.bookService.getBook(id).subscribe((data) => {
-        booksObjects.push(data);
+        booksObjects.push(data[`ISBN:${id}`]);
       });
     });
     this.books = booksObjects;
+    console.log(this.books);
 
     //use the bookService to load in books
   }

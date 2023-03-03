@@ -1,6 +1,7 @@
 <img src="../assets/campus-body.PNG" width="1200" />
 
 <div>Populär kurslitteratur:</div>
-<div *ngIf="books">
-  <h3>Title: {{ books[0].title }}</h3>
-</div>
+<li *ngFor="let book of books; index as i; first as isFirst">
+  {{ i }}/{{ books.length }}. {{ book.title }}
+  <span *ngIf="isFirst">First</span>
+</li>
