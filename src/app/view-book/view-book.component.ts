@@ -8,12 +8,16 @@ import { BookService } from '../book.service';
   styleUrls: ['./view-book.component.css'],
 })
 export class ViewBookComponent implements OnInit {
+  book: any;
   constructor(
     private bookService: BookService,
     private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    console.log(this.activatedRoute.snapshot.paramMap.get('isbn'));
+    const isbn = this.activatedRoute.snapshot.paramMap.get('isbn');
+    this.bookService.getBook(isbn).subscribe((data) => {
+      this.book = data[`ISBN:${isbn}`];
+    });
   }
 }

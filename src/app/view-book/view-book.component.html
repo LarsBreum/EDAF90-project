@@ -1,2 +1,11 @@
-<p>view-book works!</p>
-<script src="http://openlibrary.org/api/books?bibkeys=ISBN:0201558025,LCCN:93005405&format=json"></script>
+<div class="container">
+  <h1>View Book</h1>
+  <div *ngIf="book">
+    <h2>{{ book.title }}</h2>
+    <div><img src="`{{ book.cover.large }}`" /></div>
+    <p>av {{ book.authors[0].name }}</p>
+    <p>isbn: {{ book.identifiers.isbn[10] }}</p>
+    <p>Price: {{ book.number_of_pages }} kr</p>
+    <button class="btn btn-danger">Køba</button>
+  </div>
+</div>
