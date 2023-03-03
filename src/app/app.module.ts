@@ -13,6 +13,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+
 //import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [

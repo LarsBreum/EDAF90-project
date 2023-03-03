@@ -1,7 +1,14 @@
 <img src="../assets/campus-body.PNG" width="1200" />
 
-<div>Populär kurslitteratur:</div>
-<li *ngFor="let book of books; index as i; first as isFirst">
-  {{ i }}/{{ books.length }}. {{ book.title }}
-  <span *ngIf="isFirst">First</span>
-</li>
+<h1>Populär kurslitteratur:</h1>
+<div class="flex-parent">
+  <div
+    class="flex-item book-flex"
+    *ngFor="let book of books; index as i; first as isFirst"
+  >
+    <div><img src="`{{ book.cover.small }}`" /></div>
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.authors[0].name }}</p>
+    <button class="btn btn-primary">Kop</button>
+  </div>
+</div>

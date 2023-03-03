@@ -21,7 +21,7 @@ export class HomeComponent {
       this.ids = data.book_ids;
     });
 
-    //idk why I have to use this var. I cannot directly assign like this: this.books.push(data)
+    //idk why I have to use this arr. I cannot directly assign like this: this.books.push(data)
     let booksObjects = [];
 
     this.ids.forEach((id) => {

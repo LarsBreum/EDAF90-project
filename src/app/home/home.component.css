@@ -1,0 +1,12 @@
+.book-flex {
+  text-align: center;
+}
+
+.flex-parent {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-item {
+  margin: 20px;
+}
