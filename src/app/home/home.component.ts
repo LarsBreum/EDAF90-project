@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent {
   ids: any;
-  books: any;
+  books: any[];
   constructor(
     private bookService: BookService,
     private activatedroute: ActivatedRoute
@@ -21,11 +21,15 @@ export class HomeComponent {
       this.ids = data.book_ids;
     });
 
-    console.log(this.ids);
-    let test_id = this.ids[0];
-    this.books = this.bookService.getBook(test_id).subscribe((data: any) => {
-      console.log(data);
+    let booksObjects = [];
+
+    this.ids.forEach((id) => {
+      this.bookService.getBook(id).subscribe((data) => {
+        booksObjects.push(data);
+      });
     });
+    this.books = booksObjects;
+    console.log(this.books);
 
     //use the bookService to load in books
   }
