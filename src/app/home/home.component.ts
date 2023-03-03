@@ -21,6 +21,7 @@ export class HomeComponent {
       this.ids = data.book_ids;
     });
 
+    //idk why I have to use this var. I cannot directly assign like this: this.books.push(data)
     let booksObjects = [];
 
     this.ids.forEach((id) => {
@@ -29,7 +30,6 @@ export class HomeComponent {
       });
     });
     this.books = booksObjects;
-    console.log(this.books);
 
     //use the bookService to load in books
   }
