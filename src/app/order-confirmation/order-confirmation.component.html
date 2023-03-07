@@ -1,1 +1,15 @@
-<p>Trolololol</p>
+<div class="container-fluid">
+  <h3>Customer Information</h3>
+  <div *ngIf="customerData">
+    <p>{{ customerData[0].name }}</p>
+    <p>{{ customerData[0].address }}</p>
+    <p>{{ customerData[0].email }}</p>
+    <p>{{ customerData[0].cardNumber }}</p>
+    <p>{{ customerData[0].secCode }}</p>
+  </div>
+  <h3>Order bekräftelse</h3>
+  <div *ngFor="let book of orderedBooks">
+    <p>{{ book.title }}</p>
+  </div>
+  <h5>Välommen åter!</h5>
+</div>

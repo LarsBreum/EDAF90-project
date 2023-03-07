@@ -1,10 +1,15 @@
 <header class="bg-light">
   <div>
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" routerLink="/">
         <img src="../assets/campus-header.PNG" width="1200" alt="header" />
       </a>
-      <a class="navbar-brand" href="/cart">
+      <a
+        matBadge="{{ getNumberItems() }}"
+        matBadgeOverlap="true"
+        class="navbar-brand"
+        routerLink="/cart"
+      >
         <img src="../assets/cart.PNG" width="50" height="50" alt="cart" />
       </a>
     </nav>

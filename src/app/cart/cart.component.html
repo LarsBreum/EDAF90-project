@@ -1,69 +1,61 @@
 <div class="container-fluid">
   <div class="row px-5">
     <div class="col-md-7">
-      <div class="shopping-cart">
+      <div *ngIf="items" class="shopping-cart">
         <br />
-        <h6>Varukorg</h6>
-
-        <div class="cart-item" *ngFor="let item of items">
-          <span>{{ item.title }}</span>
+        <h2>Varukorg</h2>
+        <div class="cart-items" *ngFor="let item of items">
+          <span>{{ item.title }}, {{ item?.number_of_pages || 500 }} kr</span>
         </div>
-
-        <hr />
+        <p>Total price: {{ getTotalPrice() }} kr</p>
       </div>
     </div>
-    <div class="col-md-5 border rounded mt-5 mb-5 bg-white">
-      <div class="pt-6">
-        <br />
-        <h5>BOOK INFO</h5>
-        <hr />
-        <div class="price-details"></div>
-        <hr />
-        <br />
-        <h5>PRICE DETAILS</h5>
-        <hr />
-        <div class="price-details">
-          <h6>Frakt avgift: 50 kr</h6>
-          <hr />
 
-          <h6>Totalt: {{getPrice()} + 50} kr</h6>
-        </div>
-      </div>
-    </div>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Information</mat-label>
+
+        <input
+          matInput
+          id="name"
+          type="text"
+          placeholder="Name"
+          formControlName="name"
+        />
+
+        <input
+          matInput
+          id="address"
+          type="text"
+          placeholder="Address"
+          formControlName="address"
+        />
+
+        <input
+          matInput
+          id="email"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+
+        <input
+          matInput
+          id="cardNumber"
+          type="text"
+          placeholder="Card Number"
+          formControlName="cardNumber"
+        />
+
+        <input
+          matInput
+          id="secCode"
+          placeholder="3-digit security code"
+          type="text"
+          formControlName="secCode"
+        />
+        <button class="mat-button" type="submit" color="accent">Köba</button>
+      </mat-form-field>
+    </form>
   </div>
 </div>
-
-<form>
-  <div class="form-group">
-    <label for="exampleInputAdress">Address</label>
-    <input
-      type="address"
-      class="form-control"
-      id="exampleInputAddress"
-      aria-describedby="addressHelp"
-      placeholder="Enter Address"
-    />
-    <small id="AdressHelp" class="form-text text-muted"
-      >We'll never share your address with anyone else.</small
-    >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputName1">Name</label>
-    <input
-      type="Name"
-      class="form-control"
-      id="exampleInputName1"
-      placeholder="Name"
-    />
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input
-      type="Name"
-      class="form-control"
-      id="exampleInputEmail1"
-      placeholder="Name"
-    />
-  </div>
-  <button type="submit" class="btn btn-primary">Godkänn köp</button>
-</form>

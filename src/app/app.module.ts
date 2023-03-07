@@ -6,6 +6,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import {
+  MatFormFieldModule,
+  MatFormFieldControl,
+} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { ViewBookComponent } from './view-book/view-book.component';
@@ -32,7 +38,21 @@ import { HomeComponent } from './home/home.component';
     MatBadgeModule,
     MatCardModule,
     MatIconModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
     //NoopAnimationsModule
+  ],
+  exports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule,
+    MatBadgeModule,
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

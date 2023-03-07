@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from './book.service';
-import { HomeComponent } from './home/home.component';
 import { CartService } from './cart.service';
-
-declare var window: any;
 
 @Component({
   selector: 'app-root',
@@ -15,9 +12,12 @@ export class AppComponent implements OnInit {
   title = 'Kampus Bokhandenl';
   book: any;
   books: any;
-  formModal: any;
+  numItems: number;
 
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     const book_ids = [
@@ -49,10 +49,6 @@ export class AppComponent implements OnInit {
     );
 
     console.log(this.books.title);
-
-    this.formModal = new window.bootstrap.Modal(
-      document.getElementById('exampleModal')
-    );
   }
 
   getBooks(): string {
@@ -64,12 +60,8 @@ export class AppComponent implements OnInit {
     return out;
   }
 
-  openModal(): void {
-    this.formModal.show();
-  }
-
-  doSomething(): void {
-    this.formModal.hide();
+  getNumberItems() {
+    return this.cartService.getNumberItems();
   }
 }
 

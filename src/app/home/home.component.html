@@ -19,7 +19,7 @@
       <div><img src="`{{ book.cover.small }}`" /></div>
       <h3>{{ book.title }}</h3>
       <p>{{ book.authors[0].name }}</p>
-      <p>Price: {{ book.number_of_pages }} kr</p>
+      <p>Price: {{ book?.number_of_pages || 500 }} kr</p>
     </a>
     <button
       class="btn btn-primary"

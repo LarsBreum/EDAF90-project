@@ -39,7 +39,6 @@ export class HomeComponent {
 
   addToCart(isbn: any): void {
     this.cartService.addToCart(isbn);
-    const items: any = this.cartService.getItems();
-    console.log(items);
+    window.alert('added ' + isbn + ' to cart');
   }
 }
