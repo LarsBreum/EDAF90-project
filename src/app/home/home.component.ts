@@ -39,6 +39,5 @@ export class HomeComponent {
 
   addToCart(isbn: any): void {
     this.cartService.addToCart(isbn);
-    window.alert('added ' + isbn + ' to cart');
   }
 }

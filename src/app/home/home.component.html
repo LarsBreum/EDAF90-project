@@ -16,13 +16,12 @@
         }
       ]"
     >
-      <div><img src="`{{ book.cover.small }}`" /></div>
       <h3>{{ book.title }}</h3>
       <p>{{ book.authors[0].name }}</p>
       <p>Price: {{ book?.number_of_pages || 500 }} kr</p>
     </a>
-    <button
-      class="btn btn-primary"
+    <button mat-raised-button
+      color="accent"
       (click)="addToCart(book.identifiers.isbn_10[0])"
     >
       Køb

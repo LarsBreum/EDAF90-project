@@ -2,10 +2,10 @@
   <h1>View Book</h1>
   <div *ngIf="book">
     <h2>{{ book.title }}</h2>
-    <div><img src="`{{ book.cover.large }}`" /></div>
     <p>av {{ book.authors[0].name }}</p>
-    <p>isbn: {{ book.identifiers.isbn[10] }}</p>
     <p>Price: {{ book.number_of_pages }} kr</p>
-    <button class="btn btn-danger">Køba</button>
+    <button mat-raised-button color="accent" (click)="addToCart(book.identifiers.isbn_10[0])">
+      Køba
+    </button>
   </div>
 </div>
