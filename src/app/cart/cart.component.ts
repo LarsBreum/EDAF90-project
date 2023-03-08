@@ -48,6 +48,7 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     // Process checkout data here
+    console.log(this.checkoutForm.value);
     this.cartService.addCustomerData(this.checkoutForm.value);
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.router.navigate(['/order-confirmation']);

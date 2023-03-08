@@ -21,6 +21,7 @@
           type="text"
           placeholder="Name"
           formControlName="name"
+          required
         />
 
         <input
@@ -29,6 +30,7 @@
           type="text"
           placeholder="Address"
           formControlName="address"
+          required
         />
 
         <input
@@ -37,6 +39,7 @@
           type="email"
           placeholder="Email"
           formControlName="email"
+          required
         />
 
         <input
@@ -45,6 +48,7 @@
           type="text"
           placeholder="Card Number"
           formControlName="cardNumber"
+          required
         />
 
         <input
@@ -53,6 +57,9 @@
           placeholder="3-digit security code"
           type="text"
           formControlName="secCode"
+          required
+          minlength="3"
+          maxlength="3"
         />
         <button class="mat-button" type="submit" color="accent">Köba</button>
       </mat-form-field>
