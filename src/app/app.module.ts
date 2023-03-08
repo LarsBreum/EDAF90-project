@@ -12,6 +12,7 @@ import {
 } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { ViewBookComponent } from './view-book/view-book.component';
@@ -42,6 +43,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatButtonModule,
     //NoopAnimationsModule
   ],
   exports: [
